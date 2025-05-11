@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.card {
+    width: 320px;
+    height: 450px;
+    background: #ffccd5;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease-in-out;
+}
+
+.card.open {
+    transform: rotateY(180deg);
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    top: 20px;
+    clip-path: polygon(50% 15%, 80% 0, 100% 20%, 80% 40%, 50% 70%, 20% 40%, 0 20%, 20% 0);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.message {
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    font-weight: bold;
+    width: 80%; /* Cambia a un ancho mayor */
+}
+
+
+.flowers {
+    margin-top: 30px;
+    font-size: 25px;
+    color: pink;
+    animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
